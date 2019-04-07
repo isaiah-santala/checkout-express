@@ -1,5 +1,6 @@
 import React from 'react';
 import PicView from './PicView.jsx';
+import style from '../style.css';
 
 class PicCarousel extends React.Component {
     constructor(props) {
@@ -21,20 +22,21 @@ class PicCarousel extends React.Component {
     render () {
         return(
             <div>
-                {/* {console.log(this.state.imageArr)} */}
-                <div>
+                {console.log(this.props)}
+                <div className={style.heroImgHeight}>
                     <PicView picture={this.state.heroImg}/>
                 </div>
-                <div>
-                    {this.state.imageArr.map((url,index)=>(
-                            <img 
-                                src={url} 
-                                height="42" 
-                                width="42" 
-                                key={index}
-                                className="imageThumbnails"
-                                onClick={(event)=>(this.handleImgChange(event))}/>
-                    ))}
+                <div className={style.carousel}>
+                        {this.state.imageArr.map((url,index)=>(
+                                <img 
+                                    
+                                    src={url} 
+                                    height="42" 
+                                    width="42" 
+                                    key={index}
+                                    className={`imageThumbnails ${style.thumbnail} ${style["thumbnail-high-light"]}`}
+                                    onClick={(event)=>(this.handleImgChange(event))}/>
+                        ))}
                 </div>
 
 

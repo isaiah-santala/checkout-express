@@ -6,6 +6,7 @@ import PicCarousel from './components/PicCarousel.jsx';
 import StDescipt from './components/StDescript.jsx';
 import AboutProduct from './components/AboutProduct.jsx';
 import {exampleData} from '../example.js';
+import style from './style.css';
 import Axios from 'axios';
 
 class App extends React.Component {
@@ -35,13 +36,13 @@ class App extends React.Component {
         const productName = this.state.targetProdut.name
         
         return (
-            <div>
-                <h3>{productName}</h3>
-                <div>
+            <div className={`${style.font} ${style.center}`}>
+                <h3 className={style.title}>{productName}</h3>
+                <div className={style.parent}>
                     <PicCarousel imgArr={this.state.targetProdut.imageurl.split(', ')} />
+                    <StDescipt descriptArr = {descriptArr}/>
                 </div>
                 <div>
-                    <StDescipt descriptArr = {descriptArr}/>
                     <AboutProduct paragraph={longDescript}/>
                 </div>
             </div>

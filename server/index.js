@@ -9,7 +9,7 @@ const port = 3000;
 app.use(express.static(__dirname + '/../dist'));
 app.listen(port, ()=>{ console.log('...listening on port 3000')});
 
-app,get('/product',(req, res)=>{
+app.get('/product',(req, res)=>{
     console.log(req.query)
 })
 

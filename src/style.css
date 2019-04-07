@@ -1,0 +1,85 @@
+.font {
+    font-family: "Roboto","Helvetica-neue",sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+.title {
+    font-weight: 400;
+}
+
+.item-a {
+    grid-area: imgView;
+}
+
+.item-b {
+    grid-area: stDescript;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "imgView" "stDescript"
+}
+
+.center {
+    margin: auto;
+    width: 80%;
+    
+}
+
+.heroImg {
+    max-height: 500px;
+    max-width: 500px;
+}
+
+.heroImgHeight {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    width: 500px;
+}
+
+.parent {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 100%;
+}
+.child1 {
+    width: 500px
+}
+.child2 {
+    width: 330px
+}
+
+.carousel {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom:4px;
+}
+
+.stDescript {
+    font-size: 14px;
+}
+
+.thumbnail {
+    padding: 4px;
+}
+
+.thumbnail-high-light {
+    border-bottom: 4px solid blue;
+}
+
+.zeroMargin {
+    margin: 0px;
+}
+
+
+
+
