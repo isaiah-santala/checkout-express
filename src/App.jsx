@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-import PicView from './components/PicView.jsx';
 import PicCarousel from './components/PicCarousel.jsx';
 import StDescipt from './components/StDescript.jsx';
 import AboutProduct from './components/AboutProduct.jsx';
@@ -37,8 +35,8 @@ class App extends React.Component {
         
         return (
             <div className={`${style.font} ${style.center}`}>
-                <h3 className={style.title}>{productName}</h3>
-                <div className={style.parent}>
+                <h3 className={`${style.productName}`}>{productName}</h3>
+                <div className={`${style.container} ${style.productContainer}`}>
                     <PicCarousel imgArr={this.state.targetProdut.imageurl.split(', ')} />
                     <StDescipt descriptArr = {descriptArr}/>
                 </div>
