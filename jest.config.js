@@ -34,4 +34,8 @@ module.exports = {
     
     // Indicates whether each individual test should be reported during the run
     verbose: false,
+
+    moduleNameMapper: {
+        "\\.(css|less|scss|sss|styl)$": "<rootDir>/node_modules/jest-css-modules"
+      },
   };

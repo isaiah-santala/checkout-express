@@ -6,8 +6,8 @@
   "scripts": {
     "webpack": "webpack -d --watch",
     "test": "jest",
-    "test:watch": "jest --watch",    
-    "test:coverage": "jest --coverage --colors" 
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage --colors"
   },
   "keywords": [],
   "author": "",
@@ -39,15 +39,9 @@
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.12.1",
     "jest": "^24.7.1",
+    "jest-css-modules": "^2.0.0",
+    "jest-webpack": "^0.5.1",
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.3.0"
-  },
-  "jest" : {
-    "transform": {
-     "^.+\\.js?$": "babel-jest"
-    },
-    "transformIgnorePatterns": [
-     "!node_modules/react-runtime"
-    ]
-   }
+  }
 }
