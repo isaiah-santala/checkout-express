@@ -38,7 +38,7 @@ class App extends React.Component {
             <div className={`${style.font} ${style.center}`}>
                 <h3 className={`${style.productName}`}>{productName}</h3>
                 <div className={`${style.container} ${style.productContainer}`}>
-                    <PicCarousel imgArr={this.state.targetProdut.imageurl.split(', ')} />
+                    <PicCarousel imgArr={this.state.targetProdut.imageurl} />
                     <StDescipt descriptArr = {descriptArr}/>
                 </div>
                 <div>
