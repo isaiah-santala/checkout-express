@@ -6,6 +6,8 @@ import { exampleData } from '../example.js';
 import style from './style.css';
 import Axios from 'axios';
 
+const url = `http://localhost:3000/products${window.location.pathname}`
+
 class App extends React.Component {
     constructor(props) {
         super(props);
@@ -14,12 +16,24 @@ class App extends React.Component {
         }
     }
 
+    componentDidMount() {
+        this.getImages()
+    }
+
+    getImages() {
+        fetch(url)
+        .then(data => data.json())
+        .then(data => this.setState({
+            targetProdut: exampleData[data.id]
+        }))
+    }
+
     render() {
         const descriptStr = this.state.targetProdut.description1
-        const descriptArr = descriptStr.slice(0,descriptStr.length - 1).split('.,')
+        const descriptArr = descriptStr.slice(0, descriptStr.length - 1).split('.,')
         const longDescript = this.state.targetProdut.description2
         const productName = this.state.targetProdut.name
-        
+
         return (
             <div className={`${style.font} ${style.center}`}>
                 <h3 className={`${style.productName}`}>{productName}</h3>
