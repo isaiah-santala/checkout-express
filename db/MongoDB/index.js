@@ -12,3 +12,5 @@ const SDCitemSchema = new mongoose.Schema({
 })
 
 exports.SDCitems = mongoose.model('SDCitems', SDCitemSchema)
+
+// mongoimport--db SDCitems--collection items--type csv --headerline --file db / MongoDB / dummyItems / items.csv 

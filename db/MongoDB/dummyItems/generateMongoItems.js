@@ -22,5 +22,3 @@ exports.generateMongoItems = (numberOfItems, numberOfImagesPerItem) => {
   return items
 }
 
-console.log(this.generateMongoItems(3, 5))
-
