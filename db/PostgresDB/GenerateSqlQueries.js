@@ -1,5 +1,5 @@
 const faker = require('faker')
-const { GenerateImagesString } = require('./GenerateImagesString')
+const { GenerateImagesString } = require('../SharedSeedFns/GenerateImagesString')
 
 exports.GenerateSqlQueries = (tableName, numberOfQueries, numberOfImages) => {
   const queries = []

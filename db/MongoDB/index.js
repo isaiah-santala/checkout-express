@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
-mongoose.connect('mongodb://mongo:27017/SDCitems', { useMongoClient: true })
+
+mongoose.connect('mongodb://localhost/SDCitems', { useNewUrlParser: true })
 
 const SDCitemSchema = new mongoose.Schema({
   id: Number,
@@ -7,7 +8,7 @@ const SDCitemSchema = new mongoose.Schema({
   price: Number,
   description1: String,
   description2: String,
-  imageurl: String
+  imageurl: Array
 })
 
 exports.SDCitems = mongoose.model('SDCitems', SDCitemSchema)
