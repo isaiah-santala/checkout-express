@@ -1,11 +1,11 @@
 const { generatePostgresItems } = require('./generatePostgresItems')
 const { appendFileSync } = require('fs')
 
-const writeToItemsCsv = (numberOfRecords) => {
+const writeToItemsCsv = (numberOfRecords, itemsPerRecord) => {
   const path = __dirname + '/items.csv'
 
   for (let c = 0; c < numberOfRecords; c++) {
-    const items = generatePostgresItems(c * 100000, c * 100000 + 100000)
+    const items = generatePostgresItems(c * itemsPerRecord, c * itemsPerRecord + itemsPerRecord)
     appendFileSync(path, items, (err) => {
       if (err) throw err
     })
@@ -13,5 +13,5 @@ const writeToItemsCsv = (numberOfRecords) => {
   console.log('file saved!')
 }
 
-console.log(writeToItemsCsv(100))
+console.log(writeToItemsCsv(100, 100000))
 

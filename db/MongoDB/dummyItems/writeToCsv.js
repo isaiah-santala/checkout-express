@@ -1,11 +1,11 @@
 const { generateMongoItems } = require('./generateMongoItems')
 const { appendFileSync } = require('fs')
 
-const writeToCsv = (numberOfRecords) => {
+const writeToCsv = (numberOfRecords, itemsPerRecord, imagesPerItem) => {
   const path = __dirname + '/items.csv'
 
   for (let c = 0; c < numberOfRecords; c++) {
-    const items = generateMongoItems(c * 100000, c * 100000 + 100000, 5)
+    const items = generateMongoItems(c * itemsPerRecord, c * itemsPerRecord + itemsPerRecord, imagesPerItem)
     appendFileSync(path, items, (err) => {
       if (err) throw err
     })
@@ -13,5 +13,5 @@ const writeToCsv = (numberOfRecords) => {
   console.log('file saved!')
 }
 
-console.log(writeToCsv(100))
+console.log(writeToCsv(100, 100000, 5))
 

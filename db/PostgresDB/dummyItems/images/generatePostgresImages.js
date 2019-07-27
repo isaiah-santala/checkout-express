@@ -9,7 +9,7 @@ exports.generatePostgresImages = (startID, endID, startItemID) => {
       startItemID = startItemID + 1
       incrementItemId = 0
     }
-    items += `\n${c},${coolImages.one()},${startItemID}` 
+    items += `\n${c},${coolImages.one()},${startItemID}`
     incrementItemId = incrementItemId + 1
   }
 
