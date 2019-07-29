@@ -1,6 +1,10 @@
 # product_info-RL
 Product information module of GHRESEA Express, it will contain product description spanning from simple to complex base on vendor dispersion; including pictures and company websites etc. 
 
+Update
+    This module is being updated to be able to seed a database with 10million records
+    Then to server those records at a minimum speed of 1k requests per second
+
 Module Summary
     In this Product Information module of GHRSEA Express, it contains the following components in the order of their component hierarchy:
         Index:  renders components to the DOM
