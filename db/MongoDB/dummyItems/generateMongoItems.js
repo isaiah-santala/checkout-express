@@ -8,4 +8,3 @@ exports.generateMongoItems = (startID, endID, numberOfImagesPerItem) => {
   }
   return items
 }
-
