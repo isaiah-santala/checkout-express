@@ -1,2 +1,4 @@
 node_modules
 *.csv
+db/PostgresDB/config.js
+newrelic.js

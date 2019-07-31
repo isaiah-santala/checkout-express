@@ -32,10 +32,10 @@ class PicCarousel extends React.Component {
         return(
             <div className={style.autoMargin}>
                 <div className={style.heroImgHeight}>
-                    <PicView picture={this.state.heroImg}/>
+                    <PicView picture={this.state.heroImg ? this.state.heroImg : this.props.imgArr[0]}/>
                 </div>
                 <div className={style.carousel}>
-                        {this.state.imageArr.map((url,index)=>(
+                        {this.props.imgArr.map((url,index)=>(
                                 <img 
                                     src={url} 
                                     height="42" 

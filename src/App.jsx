@@ -12,7 +12,11 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            targetProdut: exampleData[0]
+            targetProdut: {
+                description1: '',
+                description2: '',
+                url:[]
+            }
         }
     }
 
@@ -24,7 +28,7 @@ class App extends React.Component {
         fetch(url)
         .then(data => data.json())
         .then(data => this.setState({
-            targetProdut: exampleData[data.id]
+            targetProdut: data
         }))
     }
 
@@ -38,7 +42,7 @@ class App extends React.Component {
             <div className={`${style.font} ${style.center}`}>
                 <h3 className={`${style.productName}`}>{productName}</h3>
                 <div className={`${style.container} ${style.productContainer}`}>
-                    <PicCarousel imgArr={this.state.targetProdut.imageurl} />
+                    <PicCarousel imgArr={this.state.targetProdut.url} />
                     <StDescipt descriptArr = {descriptArr}/>
                 </div>
                 <div>
