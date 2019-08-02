@@ -37,7 +37,7 @@ class App extends React.Component {
         const descriptStr = this.state.targetProdut.description1
         const descriptArr = descriptStr.slice(0, descriptStr.length - 1).split('.,')
         const longDescript = this.state.targetProdut.description2
-        const { itemname } = this.state.targetProdut
+        const { itemname, price } = this.state.targetProdut
 
         return (
             <div className={`${style.font} ${style.center}`}>
@@ -45,9 +45,6 @@ class App extends React.Component {
                 <div className={`${style.container} ${style.productContainer}`}>
                     <PicCarousel imgArr={this.state.targetProdut.url} />
                     <StDescipt descriptArr = {descriptArr}/>
-                </div>
-                <div>
-                    <AboutProduct paragraph={longDescript}/>
                 </div>
             </div>
         )
