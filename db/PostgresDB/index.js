@@ -11,4 +11,3 @@ exports.getItemById = (id, cb) => {
     return cb(null, data)
   })
 }
-

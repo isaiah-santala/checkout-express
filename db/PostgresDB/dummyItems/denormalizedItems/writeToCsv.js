@@ -14,5 +14,5 @@ const writeToImagesCsv = (numberOfRecords, itemsPerRecord, imagesPerItem) => {
   console.log('file saved!')
 }
 
-console.log(writeToImagesCsv(100, 500000, 5))
+console.log(writeToImagesCsv(40, 500000, 5))
 
