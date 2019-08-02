@@ -5,7 +5,7 @@ import AboutProduct from './components/AboutProduct.jsx';
 import style from './style.css';
 import Axios from 'axios';
 
-const url = `http://localhost:3000/products${window.location.pathname}`
+const url = `http://ec2-54-200-116-171.us-west-2.compute.amazonaws.com:3000/products${window.location.pathname}`
 
 class App extends React.Component {
     constructor(props) {
