@@ -1,8 +1,7 @@
 require('newrelic');
 const express = require('express');
 const app = express();
-const { getItemById } = require('../db/PostgresDB/index.js')
-
+const { getItemById } = require('../dbProduction/index')
 
 const port = 3000;
 
