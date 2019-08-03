@@ -3,7 +3,7 @@ const app = express();
 const { getItemById } = require('../dbProduction/index')
 const cors = require('cors')
 
-const port = 3001;
+const port = 3000;
 
 app.use(cors())
 
