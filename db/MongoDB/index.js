@@ -11,4 +11,8 @@ const SDCitemSchema = new mongoose.Schema({
   imageurl: Array
 })
 
+SDC.find({id:1}, (err, data) => {
+  
+})
+
 exports.SDCitems = mongoose.model('SDCitems', SDCitemSchema)

@@ -1,9 +1,11 @@
-require('newrelic');
 const express = require('express');
 const app = express();
 const { getItemById } = require('../dbProduction/index')
+const cors = require('cors')
 
 const port = 3000;
+
+app.use(cors())
 
 app.use('/:id', express.static(__dirname + '/../dist'));
 
