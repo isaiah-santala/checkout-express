@@ -3,7 +3,7 @@ const app = express();
 const { getItemById } = require('../dbProduction/index')
 const cors = require('cors')
 
-const port = 3000;
+const port = 3001;
 
 app.use(cors())
 
@@ -20,4 +20,4 @@ app.get('/products/:id', (req, res) => {
     })
 })
 
-app.listen(port, () => { console.log('...listening on port 3000') });
+app.listen(port, () => { console.log(`...listening on port ${port}`) });
