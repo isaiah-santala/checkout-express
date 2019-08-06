@@ -3,10 +3,12 @@ const express = require('express');
 const app = express();
 const { getItemById } = require('../dbProduction/index')
 const cors = require('cors')
+const morgan = require('morgan')
 
 const port = 3000;
 
 app.use(cors())
+app.use(morgan('dev'))
 
 app.use('/:id', express.static(__dirname + '/../dist'));
 
