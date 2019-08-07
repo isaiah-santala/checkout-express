@@ -4,10 +4,12 @@ const app = express();
 const { getItemById } = require('../dbProduction/index')
 const cors = require('cors')
 const morgan = require('morgan')
+const compression = require('compression')
 
 const port = 3000;
 
 app.use(cors())
+app.use(compression())
 app.use(morgan('dev'))
 
 app.use('/:id', express.static(__dirname + '/../dist'));
