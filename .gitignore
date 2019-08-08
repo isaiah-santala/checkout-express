@@ -3,3 +3,4 @@ node_modules
 db/PostgresDB/config.js
 artillery.yml
 newrelic_agent.log
+*.env

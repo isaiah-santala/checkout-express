@@ -1,11 +1,9 @@
 import React from 'react';
 import PicCarousel from './components/PicCarousel.jsx';
 import StDescipt from './components/StDescript.jsx';
-import AboutProduct from './components/AboutProduct.jsx';
 import style from './style.css';
-import Axios from 'axios';
 
-const url = `http://ec2-54-188-4-42.us-west-2.compute.amazonaws.com:8080/products${window.location.pathname}`
+const url = `/products${window.location.pathname}`
 
 class App extends React.Component {
     constructor(props) {
