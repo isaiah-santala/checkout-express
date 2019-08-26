@@ -9,7 +9,7 @@ class App extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            targetProdut: {
+            targetProduct: {
                 itemname:'',
                 price:'',
                 description1:'',
@@ -27,21 +27,21 @@ class App extends React.Component {
         fetch(url)
         .then(data => data.json())
         .then(data => this.setState({
-            targetProdut: data
+            targetProduct: data
         }))
     }
 
     render() {
-        const descriptStr = this.state.targetProdut.description1
+        const { itemname } = this.state.targetProduct
+
+        const descriptStr = this.state.targetProduct.description1
         const descriptArr = descriptStr.slice(0, descriptStr.length - 1).split('.,')
-        const longDescript = this.state.targetProdut.description2
-        const { itemname, price } = this.state.targetProdut
 
         return (
             <div className={`${style.font} ${style.center}`}>
                 <h3 className={`${style.productName}`}>{itemname}</h3>
                 <div className={`${style.container} ${style.productContainer}`}>
-                    <PicCarousel imgArr={this.state.targetProdut.url} />
+                    <PicCarousel imgArr={this.state.targetProduct.url} />
                     <StDescipt descriptArr = {descriptArr}/>
                 </div>
             </div>
